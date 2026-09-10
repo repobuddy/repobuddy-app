@@ -37,7 +37,7 @@
     "husky": "^7.0.0",
     "jest": "^27.4.7",
     "jest-watch-suspend": "^1.1.2",
-    "jest-watch-toggle-config": "^2.0.1",
+    "jest-watch-toggle-config": "^3.0.0",
     "jest-watch-typeahead": "^1.0.0",
     "nock": "^13.0.5",
     "npm-run-all2": "^5.0.0",
