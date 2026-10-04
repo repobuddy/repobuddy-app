@@ -22,7 +22,7 @@
     "verify": "run-p verify:build coverage",
     "verify:build": "npm-run-all clean build",
     "watch": "jest --watch",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "probot": "^12.1.4"
