@@ -2,5 +2,37 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+    {
+      "description": "jest 28+ and its types need TypeScript 5 (jest 30's @types pull in .d.ts TS 4.9 cannot parse) and a Node-compatible probot stack; this dormant app is pinned to the jest 27 toolchain. Lift when the app is modernized.",
+      "matchPackageNames": [
+        "jest",
+        "@types/jest",
+        "ts-jest"
+      ],
+      "allowedVersions": "<28"
+    },
+    {
+      "description": "jest-watch-typeahead 2+ and jest-watch-toggle-config 3+ require newer jest; stay on versions compatible with jest 27.",
+      "matchPackageNames": [
+        "jest-watch-typeahead"
+      ],
+      "allowedVersions": "<2"
+    },
+    {
+      "description": "jest-watch-toggle-config 3+ requires newer jest; stay on 2.x with jest 27.",
+      "matchPackageNames": [
+        "jest-watch-toggle-config"
+      ],
+      "allowedVersions": "<3"
+    },
+    {
+      "description": "eslint 10 removes .eslintrc and --ext, which this repo's lint setup uses; needs a flat-config migration first.",
+      "matchPackageNames": [
+        "eslint"
+      ],
+      "allowedVersions": "<10"
+    }
   ]
 }
