@@ -28,11 +28,18 @@
       "allowedVersions": "<3"
     },
     {
-      "description": "eslint 10 removes .eslintrc and --ext, which this repo's lint setup uses; needs a flat-config migration first.",
+      "description": "eslint 9+ defaults to flat config and eslint 10 removes .eslintrc and --ext, which this repo's lint setup uses; needs a flat-config migration first.",
       "matchPackageNames": [
         "eslint"
       ],
-      "allowedVersions": "<10"
+      "allowedVersions": "<9"
+    },
+    {
+      "description": "@types/node 18+ declarations do not parse under TypeScript 4.9 (build: 1493 errors); stay on 17 until the app moves to a newer TypeScript.",
+      "matchPackageNames": [
+        "@types/node"
+      ],
+      "allowedVersions": "<18"
     }
   ]
 }
